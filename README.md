@@ -60,18 +60,6 @@ save you a lot of time in the long run, because you won't need to manually
 restart the server each time you make a small change in code. To install, run
 `sudo npm install -g nodemon`.
 
-# Install
-- First initialize your package.json file by running the following command in Terminal, (if you haven't done so already)
-
-```bash
-npm npm init -y
-```
-- Next, Install the package by running the command below
-
-```bash
-npm install --save shitsandgrins
-```
-
 # Support
 
 What!? You think this is some sort of GAME!? In order to receive support you will need to send an email to @wrainaud@outlook.com containing the following:
