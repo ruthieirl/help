@@ -1,7 +1,3 @@
-body {
- border: 1px solid red;
-}
-
 .wrapper {
-  background: blue;
+  display: flex;
 }
