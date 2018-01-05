@@ -32,17 +32,16 @@ export class Container extends React.Component {
   render() {
     return (
       <div>
-        Hello from the container
-        <Map
-          google={this.props.google}
-          onReady={this.onReady.bind(this)}
-          visible={false}>
+          <Map
+            google={this.props.google}
+            onReady={this.onReady.bind(this)}
+            visible={false}>
 
-          {this.state.places.map(place => {
-            return (<div key={place.id}>{place.name}</div>)
-          })}
-
-        </Map>
+            {this.state.places.map(place => {
+              return (<div key={place.id}>{place.name}</div>)
+            })}
+          </Map>
+       
       </div>
     )
   }
