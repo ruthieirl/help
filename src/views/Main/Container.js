@@ -2,7 +2,7 @@
 import React from 'react'
 import Map, {GoogleApiWrapper} from 'google-maps-react'
 
-import {searchNearby} from 'utils /googleApiHelpers'
+import {searchNearby} from 'utils/googleApiHelper'
 
 import Header from 'components/Header/Header'
 import Footer from 'components/Footer/Footer'
