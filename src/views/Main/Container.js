@@ -1,11 +1,13 @@
 // in src/views/Main/Container.js
 import React from 'react'
 import Map, {GoogleApiWrapper} from 'google-maps-react'
-
 import {searchNearby} from 'utils/googleApiHelper'
 
 import Header from 'components/Header/Header'
 import Footer from 'components/Footer/Footer'
+import Sidebar from 'components/Sidebar/Sidebar'
+
+import styles from './styles.module.css'
 
 export class Container extends React.Component {
     constructor(props) {
@@ -37,6 +39,7 @@ export class Container extends React.Component {
     return (
       <div>
         <Header />
+        <Sidebar />
         <Map
           google={this.props.google}
           onReady={this.onReady.bind(this)}
