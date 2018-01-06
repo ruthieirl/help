@@ -35,22 +35,18 @@ export class Container extends React.Component {
         // There was an error
       })
   }
-  render() {
+    render() {
     return (
-      <div>
-        <Header />
-        <Sidebar />
         <Map
-          google={this.props.google}
-          onReady={this.onReady.bind(this)}
-          visible={false}>
-
-          {this.state.places.map(place => {
-            return (<div key={place.id}>{place.name}</div>)
-          })}
-
+          visible={false}
+          className={styles.wrapper}>
+          <Header />
+          <Sidebar />
+          <div className={styles.content}>
+            {/* Setting children routes to be rendered*/}
+            {this.props.children}
+          </div>
         </Map>
-      </div>
     )
   }
 }
