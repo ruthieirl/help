@@ -1,70 +1,90 @@
-import React from 'react';
-import Map, {GoogleApiWrapper} from 'google-maps-react';
-import {searchNearby} from 'utils/googleApiHelper';
+import React, { PropTypes as T } from 'react'
+import Map, {GoogleApiWrapper} from 'google-maps-react'
+import {searchNearby} from 'utils/googleApiHelpers'
 
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import Sidebar from 'components/Sidebar/Sidebar';
 
-import styles from './styles.module.css';
+import Header from 'components/Header/Header'
+import Sidebar from 'components/Sidebar/Sidebar'
+
+import styles from './styles.module.css'
 
 export class Container extends React.Component {
-    constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       places: [],
       pagination: null
     }
-  };
+  }
+
   onReady(mapProps, map) {
-    const {google} = this.props;
-    const opts = {
-      location: map.center,
-      radius: '500',
-      types: ['cafe']
-    };
-    searchNearby(google, map, opts)
-      .then((results, pagination) => {
-        this.setState({
-          places: results,
-          pagination
-        })
-      }).catch((status, result) => {
-        // There was an error
+    searchNearby(
+      this.props.google,
+      map,
+      {
+        location: map.center,
+        radius: '500',
+        types: ['cafe']
+      }
+    ).then((results, pagination) => {
+      this.setState({
+        places: results,
+        pagination
       })
-  };
+    }).catch((status) => {
+      console.log('error fetching nearby', status)
+    })
+  }
+
+  onMapMove() {}
 
   onMarkerClick(item) {
-    const {place} = item; //place prop
     const {push} = this.context.router;
+    const {place} = item;
     push(`/map/detail/${place.place_id}`)
-  };
+  }
+
   render() {
     let children = null;
     if (this.props.children) {
-      // We have children in the Container component
-      children = React.cloneElement(
-        this.props.children,
-        {
-          google: this.props.google,
-          places: this.state.places,
-          loaded: this.props.loaded,
-          onMarkerClick: this.onMarkerClick.bind(this)
-        });
-    };
+      children = React.cloneElement(this.props.children, {
+        google: this.props.google,
+        places: this.state.places,
+        loaded: this.props.loaded,
+        router: this.context.router,
+        onMove: this.onMapMove.bind(this),
+        onMarkerClick: this.onMarkerClick.bind(this),
+        zoom: this.props.zoom
+      })
+    }
+
     return (
-      
-      <div className={styles.content}>
-        {this.props.children}
-      </div>
+        <Map
+          google={this.props.google}
+          onReady={this.onReady.bind(this)}
+          visible={false}
+          className={styles.wrapper}>
+          <Header />
+
+          <Sidebar
+              title={'Sweet Dragons'}
+              onListItemClick={this.onMarkerClick.bind(this)}
+              places={this.state.places} />
+
+          <div className={styles.content}>
+            {children}
+          </div>
+
+        </Map>
     )
   }
-};
+}
+
 Container.contextTypes = {
-  router: React.PropTypes.object
-};
+  router: T.object
+}
 
 export default GoogleApiWrapper({
   apiKey: __GAPI_KEY__
-})(Container);
+})(Container)

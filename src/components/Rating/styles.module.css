@@ -2,7 +2,7 @@
 
 .sprite {
   unicode-bidi: bidi-override;
-  color: #404040;
+  color: var(--dark);
   font-size: 25px;
   height: 25px;
   width: 100px;
@@ -10,10 +10,10 @@
   position: relative;
   padding: 0;
   text-shadow: 0px 1px 0 var(--light-gray);
-};
+}
 
 .top {
-  color: #48b5e9;
+  color: var(--highlight);
   padding: 0;
   position: absolute;
   z-index: 1;
@@ -21,11 +21,11 @@
   top: 0;
   left: 0;
   overflow: hidden;
-};
+}
 
 .bottom {
   padding: 0;
   display: block;
   z-index: 0;
-  color: #a2a2a2;
-};
+  color: var(--light-gray);
+}

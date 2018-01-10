@@ -1,8 +1,8 @@
-import React, { PropTypes as T } from 'react';
-import classnames from 'classnames';
-import Map, {GoogleApiWrapper, Marker} from 'google-maps-react';
+import React, { PropTypes as T } from 'react'
+import classnames from 'classnames'
+import Map, {GoogleApiWrapper, Marker} from 'google-maps-react'
 
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 export class MapComponent extends React.Component {
   _renderMarkers() {
@@ -19,7 +19,7 @@ export class MapComponent extends React.Component {
                 map={this.props.map}
                 position={p.geometry.location} />
     });
-  };
+  }
 
   _renderChildren() {
     const {children} = this.props;
@@ -34,7 +34,7 @@ export class MapComponent extends React.Component {
     } else {
       return this._renderMarkers();
     }
-  };
+  }
 
   render() {
     const {children} = this.props;
@@ -53,15 +53,14 @@ export class MapComponent extends React.Component {
       </Map>
     )
   }
-};
+}
 
 MapComponent.propTypes = {
   onMarkerClick: T.func
-};
-
+}
 const identity = (...a) => a;
 MapComponent.defaultProps = {
   onMarkerClick: identity
-};
+}
 
-export default MapComponent;
+export default MapComponent

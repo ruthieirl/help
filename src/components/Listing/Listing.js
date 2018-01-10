@@ -1,8 +1,8 @@
-import React, { PropTypes as T } from 'react';
-import classnames from 'classnames';
+import React, { PropTypes as T } from 'react'
+import classnames from 'classnames'
 
 import Item from './Item';
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 export class Listing extends React.Component {
   render() {
@@ -12,12 +12,27 @@ export class Listing extends React.Component {
         return (
           <Item place={place}
                 onClick={this.props.onClick}
+                onHighlight={this.props.onHighlight}
+                offHighlight={this.props.offHighlight}
                 key={place.id} />
         )
       })}
       </div>
     )
   }
-};
+}
 
-export default Listing;
+Listing.propTypes = {
+  places: T.array.isRequired,
+  onHighlight: T.func,
+  offHighlight: T.func,
+  onClick: T.func
+}
+
+Listing.defaultProps = {
+  onHighlight: () => {},
+  offHighlight: () => {},
+  onClick: () => {},
+}
+
+export default Listing

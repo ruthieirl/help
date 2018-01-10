@@ -2,10 +2,9 @@ import React, { PropTypes } from 'react';
 import { Router } from 'react-router';
 
 class App extends React.Component {
-  
   static contextTypes = {
     router: PropTypes.object
-  };
+  }
 
   static propTypes = {
     history: PropTypes.object.isRequired,
@@ -18,7 +17,7 @@ class App extends React.Component {
         routes={this.props.routes}
         history={this.props.history} />
     )
-  };
+  }
 
   render () {
      return (
@@ -27,6 +26,6 @@ class App extends React.Component {
        </div>
      )
    }
-};
+}
 
 export default App;
