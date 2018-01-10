@@ -2,6 +2,10 @@
   "name": "Help!",
   "version": "1.0.0",
   "description": "Help! is a web based application that provides quick and easy access to Autobody and Repair Shops, Towing Companies, and Emergency resources in your area. Help! is built with the MERN stack ( MongoDB, Express, React, Node.js).",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruthieirl/help.git"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development hjs-dev-server",
     "clean": "rimraf dist",
@@ -12,7 +16,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "author": "Ruthie Campiz & William Rainaud",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.7",

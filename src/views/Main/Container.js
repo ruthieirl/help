@@ -56,7 +56,6 @@ export class Container extends React.Component {
     return (
       
       <div className={styles.content}>
-        
         {this.props.children}
       </div>
     )
