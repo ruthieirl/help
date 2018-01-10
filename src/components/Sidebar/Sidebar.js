@@ -1,5 +1,5 @@
-import React, { PropTypes as T } from 'react'
-import styles from './styles.module.css'
+import React, { PropTypes as T } from 'react';
+import styles from './styles.module.css';
 
 export class Sidebar extends React.Component {
   render() {
@@ -11,6 +11,6 @@ export class Sidebar extends React.Component {
       </div>
     )
   }
-}
+};
 
-export default Sidebar
+export default Sidebar;

@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link} from 'react-router'
+import React from 'react';
+import {Link} from 'react-router';
 
 import styles from './styles.module.css';
 
@@ -20,6 +20,6 @@ export class Header extends React.Component {
       </div>
     )
   }
-}
+};
 
-export default Header
+export default Header;

@@ -3,7 +3,8 @@
   overflow: auto;
   padding-bottom: 60px;
   margin: 0;
-}
+};
+
 .item {
   display: flex;
   flex-direction: row;
@@ -16,14 +17,14 @@
     &:hover {
       color: $highlight;
     }
-  }
+  };
 
   .rating {
     text-align: right;
     flex: 1;
-  }
+  };
 
   &:last-child {
     border-bottom: none;
   }
-}
+};

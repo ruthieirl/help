@@ -1,9 +1,9 @@
-import React from 'react'
-import { expect } from 'chai'
-import { shallow } from 'enzyme'
+import React from 'react';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
 
-import Listing from './Listing'
-import styles from './styles.module.css'
+import Listing from './Listing';
+import styles from './styles.module.css';
 
 describe('<Listing />', () => {
   let wrapper;

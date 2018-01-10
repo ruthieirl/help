@@ -1,8 +1,8 @@
-import React, { PropTypes as T } from 'react'
-import classnames from 'classnames'
+import React, { PropTypes as T } from 'react';
+import classnames from 'classnames';
 
 import Rating from 'components/Rating/Rating';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 export class Item extends React.Component {
   render() {
@@ -15,6 +15,6 @@ export class Item extends React.Component {
       </div>
     )
   }
-}
+};
 
-export default Item
+export default Item;

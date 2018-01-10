@@ -1,8 +1,8 @@
-import React from 'react'
-import {expect} from 'chai'
-import {shallow} from 'enzyme'
+import React from 'react';
+import {expect} from 'chai';
+import {shallow} from 'enzyme';
 
-import Rating from './Rating'
+import Rating from './Rating';
 import styles from './styles.module.css';
 
 describe('<Rating />', function () {
