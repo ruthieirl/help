@@ -1,5 +1,4 @@
 # Help!
-<div align="center">
   <!-- Dependency Status -->
   <a href="https://david-dm.org/ruthieirl/help">
     <img src="https://david-dm.org/ruthieirl/help.svg" alt="Dependency Status" />
@@ -15,12 +14,12 @@
   <!-- License -->
   <a href="http://wjr3.mit-license.org">
     <img src="http://img.shields.io/:license-mit-blue.svg" alt="License" />
-</div>
+  </a>
 
 **Live Demo**:
 
 ## Summary
-Help! is a web based application that provides quick and easy access to Autobody and Repair Shops, Towing Companies, and Emergency resources in your area. Help! is built with love, paitience, and the MERN stack ( MongoDB, Express, React, Node.js).
+A web based application that provides quick and easy access to Autobody and Repair Shops, Towing Companies, and Emergency resources in your area. Help! is built with love, paitience, and the MERN stack ( MongoDB, Express, React, Node.js).
 
 ### Testimonials
 
