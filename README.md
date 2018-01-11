@@ -1,5 +1,21 @@
 # Help!
-[![Dependency Status](https://david-dm.org/sahat/hackathon-starter/status.svg?style=flat)](https://david-dm.org/sahat/hackathon-starter)[![Build Status](https://travis-ci.org/rjrodger/use-plugin.png?branch=master)](https://travis-ci.org/rjrodger/use-plugin)
+<div align="center">
+  <!-- Dependency Status -->
+  <a href="https://david-dm.org/ruthieirl/help">
+    <img src="https://david-dm.org/ruthieirl/help.svg" alt="Dependency Status" />
+  </a>
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/ruthieirl/help#info=devDependencies">
+    <img src="https://david-dm.org/ruthieirl/help/dev-status.svg" alt="devDependency Status" />
+  </a>
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/ruthieirl/help">
+    <img src="https://travis-ci.org/ruthieirl/help.svg" alt="Build Status" />
+  </a>
+  <!-- License -->
+  <a href="http://wjr3.mit-license.org">
+    <img src="http://img.shields.io/:license-mit-blue.svg" alt="License" />
+</div>
 
 **Live Demo**:
 
