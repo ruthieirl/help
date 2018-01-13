@@ -48,9 +48,7 @@ export class MapComponent extends React.Component {
         onDragend={this.props.onMove}
         onClick={this.props.onClick}
         visible={!children || React.Children.count(children) == 0}
-        >
-        {this._renderChildren()}
-      </Map>
+        />
     )
   }
 }

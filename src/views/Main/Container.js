@@ -1,10 +1,7 @@
 import React, { PropTypes as T } from 'react'
 import Map, {GoogleApiWrapper} from 'google-maps-react'
 import {searchNearby} from 'utils/googleApiHelpers'
-
-
 import Header from 'components/Header/Header'
-import Sidebar from 'components/Sidebar/Sidebar'
 
 import styles from './styles.module.css'
 
@@ -25,7 +22,7 @@ export class Container extends React.Component {
       {
         location: map.center,
         radius: '500',
-        types: ['garage']
+        types: ['garage', 'mechanic', 'body shop']
       }
     ).then((results, pagination) => {
       this.setState({
@@ -60,23 +57,17 @@ export class Container extends React.Component {
     }
 
     return (
+      <Header>
         <Map
           google={this.props.google}
           onReady={this.onReady.bind(this)}
           visible={false}
           className={styles.wrapper}>
-          <Header />
-
-          <Sidebar
-              title={'Sweet Dragons'}
-              onListItemClick={this.onMarkerClick.bind(this)}
-              places={this.state.places} />
-
           <div className={styles.content}>
             {children}
           </div>
-
         </Map>
+      </Header>
     )
   }
 }
