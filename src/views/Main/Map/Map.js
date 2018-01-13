@@ -1,6 +1,6 @@
 import React, { PropTypes as T } from 'react'
 import classnames from 'classnames'
-import Map, {GoogleApiWrapper, Marker} from 'google-maps-react'
+import Map, {GoogleApiWrapper, Marker} from 'shitsandgrins2'
 
 import styles from './styles.module.css'
 
@@ -48,19 +48,9 @@ export class MapComponent extends React.Component {
         onDragend={this.props.onMove}
         onClick={this.props.onClick}
         visible={!children || React.Children.count(children) == 0}
-        >
-        {this._renderChildren()}
-      </Map>
+        />
     )
   }
-}
-
-MapComponent.propTypes = {
-  onMarkerClick: T.func
-}
-const identity = (...a) => a;
-MapComponent.defaultProps = {
-  onMarkerClick: identity
 }
 
 export default MapComponent

@@ -5,10 +5,6 @@ import {getDetails} from 'utils/googleApiHelpers'
 import styles from './styles.module.css'
 
 export class Detail extends React.Component {
-  static childContextTypes = {
-    router: T.object,
-  }
-
   constructor(props, context) {
     super(props, context)
 
