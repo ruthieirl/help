@@ -3,13 +3,15 @@ import {Link} from 'react-router-dom'
 import DisplayLinks from '../DisplayLinks/DisplayLinks'
 
 import styles from './styles.module.css';
+//import { Button } from 'reactstrap';
 
 export class Header extends React.Component {
   
   render() {
     return (
-      <div className={styles.topbar}>
-        <Link className={styles.logo} to="/"><h1>Help</h1></Link>
+      <div className="topbar">
+        <Link to="/"><h1>HELP!</h1></Link>
+        <button className="btn btn-block">Search</button>
         <section>
           <DisplayLinks />
         </section>
