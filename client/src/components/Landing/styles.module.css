@@ -1,0 +1,21 @@
+.Landing-header {
+  text-align: center;
+  background-color: #000;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.search-btn {
+  margin-top: 5px;
+  background-color: #00cccc;
+}
+
+.icon-box {
+  padding: 25px 0;
+}
+
+.fa {
+  padding-top: 5px;
+}
