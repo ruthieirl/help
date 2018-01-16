@@ -6,10 +6,13 @@
   top: 0;
   left: 0;
 
-  background: #48b5e9;
-  width: 100%;
-  padding: 0 25px;
+  background: #D31027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  width: 100%;
+  padding: 0 20px;
+  line-height: 50px;
   height: var(--topbar-height);
   line-height: var(--topbar-height);
   color: #fff;
@@ -20,14 +23,30 @@
     text-decoration: none;
     letter-spacing: 1px;
 
-    line-height: 40px;
+    line-height: 50px;
     h1 {
-      font-size: 28px;
+      font-size: 38px;
+      display: inline;
+      margin-top: -10px;
+      line-height: 50px;
+      position: absolute;
+      top: 30px;
+
+    }
+    h2 {
+      font-size: 20px;
+      padding: 15px;
+      line-height: 50px;
+      -webkit-margin-after: 0px;
+      -webkit-margin-before: 0px;
+      
     }
   }
   section {
+    display: inline-flex;
     position: absolute;
     top: 0px;
-    right: 25px;
+    right: 60px;
+
   }
 }

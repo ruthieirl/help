@@ -24,11 +24,11 @@ var config = getConfig({
   html: function (context) {
     return {
       'index.html': context.defaultTemplate({
-        title: 'yelp-clone from fullstackreact.com',
+        title: 'Help',
         publicPath: isDev ? 'http://localhost:3000/' : '',
         meta: {
-          'name': 'fullstackreact yelp clone',
-          'description': 'A minimal yelp clone from the team behind the fullstackreact.com book'
+          'name': 'Help',
+          'description': 'A web based application that provides quick and easy access to Autobody and Repair Shops, Towing Companies, and Emergency resources in your area'
         }
       })
     }
@@ -95,7 +95,11 @@ config.postcss = [].concat([
   require('cssnano')({})
 ])
 // END postcss
-
+module: {
+  loaders: [
+    { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+  ]
+}
 // Roots
 config.resolve.root = [src, modules]
 config.resolve.alias = {
@@ -103,7 +107,7 @@ config.resolve.alias = {
   'containers': join(src, 'containers'),
   'components': join(src, 'components'),
   'utils': join(src, 'utils'),
-
+  'media': join(src, 'media'),
   'styles': join(src, 'styles')
 }
 // end Roots

@@ -1,5 +1,5 @@
 import React, { PropTypes as T } from 'react'
-import Map, {GoogleApiWrapper} from 'google-maps-react'
+import Map, {GoogleApiWrapper} from 'shitsandgrins2'
 import {searchNearby} from 'utils/googleApiHelpers'
 
 
@@ -25,7 +25,7 @@ export class Container extends React.Component {
       {
         location: map.center,
         radius: '500',
-        types: ['cafe']
+        types: ['drug store', 'mechanic', 'machinist', 'bodega']
       }
     ).then((results, pagination) => {
       this.setState({
@@ -68,7 +68,7 @@ export class Container extends React.Component {
           <Header />
 
           <Sidebar
-              title={'Sweet Dragons'}
+              title={'You need help?'}
               onListItemClick={this.onMarkerClick.bind(this)}
               places={this.state.places} />
 
