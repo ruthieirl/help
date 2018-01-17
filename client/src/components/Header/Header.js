@@ -9,9 +9,9 @@ export class Header extends React.Component {
   
   render() {
     return (
-      <div className={styles.topbar}>
+      <div className="topbar">
         <img src={logo} alt="Logo" height="70px" width="70px" />
-        <Link className={styles.logo} to="/"><h1>Help</h1></Link>
+        <Link to="/"><h1><i className="fa fa-yelp" aria-hidden="true"></i> HELP!</h1></Link>
         <section>
           <DisplayLinks />
         </section>
