@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Map from 'google-maps-react';
 import axios from 'axios';
-import { searchNearby } from '../../utils/googleApiHelpers';
 
 import styles from './styles.module.css';
 

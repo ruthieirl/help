@@ -41,5 +41,6 @@
   "devDependencies": {
     "concurrently": "^3.5.0",
     "nodemon": "^1.12.1"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

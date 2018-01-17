@@ -1,46 +1,25 @@
-import React, { PropTypes as T } from 'react'
-import classnames from 'classnames'
-
-
+import React from 'react'
 import styles from './styles.module.css'
 
 export class Item extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      hovered: false
-    }
-  }
-
-  onClick(e) {
-    this.props.onClick(this.props.place);
   }
 
   render() {
-    const {place} = this.props;
+    const {detail} = this.props;
     return (
-      <div
-        onClick={this.onClick.bind(this)}
-        className={classnames(styles.item, {
-        [styles.itemHovered]: this.state.hovered
-      })}>
-          <h1 className="title">{place.name}</h1>
-          <Rating className={styles.rating}
-                  percentage={(place.rating/5)} />
+      <div>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <h3>{detail.name}</h3>
+          <p>{detail.formatted_address}</p>
+          <p>{detail.formatted_phone_number}</p>
+          <p>{detail.website}</p>
+            <button type="submit" class="btn btn-info"> Save Info</button>
+        </li>
       </div>
     )
   }
-}
-
-Item.propTypes = {
-  place: T.object.isRequired,
-  onHighlight: T.func,
-}
-
-Item.defaultProps = {
-  onHighlight: () => {},
-  offHighlight: () => {}
 }
 
 export default Item
