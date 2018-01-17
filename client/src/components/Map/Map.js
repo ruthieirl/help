@@ -13,7 +13,7 @@ export class MapContainer extends Component {
   state = {
     places: [],
     center: {},
-    zoom: 11
+    zoom: 16
   };
 
   // in case browser can't find your location (change this to be local)
