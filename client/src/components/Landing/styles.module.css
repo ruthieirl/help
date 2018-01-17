@@ -1,3 +1,8 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 .Landing {
   z-index: 10;
   margin-top: 80px;
@@ -16,22 +21,27 @@ body {
 
 .search-btn {
   margin-top: 5px;
-  background-color: #00cccc;
+  background-color: #2d9975;
   color: #fff;
 }
 
 .icon-box {
   padding: 25px 0;
-  text-shadow: 2px 2px 4px #000000;
+}
+
+.iconbtn {
+  color: #2d9975;
+  background-color: #fff;
 }
 
 .fa {
   padding-top: 5px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .btn-block {
   margin-top: 5px;
-  background-color: #00cccc;
+  background-color: #f4a922;
   color: #fff;
   border: 1px solid #fff;
     -moz-border-radius: 6px;
@@ -57,14 +67,14 @@ body {
 }
 
 .btn-block:hover {
-  background-color: #b366ff;
+  background-color: #e62601;
 }
 
 a {
-  color: #00cccc;
+  color: #f4a922;
 }
 
 a:hover {
   text-decoration: none;
-  color: #b366ff;
+  color: #e62601;
 }

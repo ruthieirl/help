@@ -1,20 +1,21 @@
 @import url("../../styles/base.css");
 
 .topbar {
-  background-color: #330066;
+  background-color: #1e3e33;
   height: 80px;
   position: fixed;
-  z-index: 12;
+  z-index: 20;
   top: 0;
   left: 0;
   width: 100%;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 a {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
-    background-color: #330066;
+    background-color: #1e3e33;
     line-height: 40px;
 }
     

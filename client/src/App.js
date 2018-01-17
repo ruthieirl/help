@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import MapContainer from './components/Map/Map';
 import Landing from './components/Landing/Landing';
 import LoginForm from './components/Login/LoginForm';

@@ -58,7 +58,6 @@ export class MapContainer extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="mapCont">
         <div style={{ minWidth: '100vh', height: '100vh' }}>
           <GoogleMapReact
             bootstrapURLKeys={{
@@ -77,7 +76,7 @@ export class MapContainer extends Component {
         }
           </GoogleMapReact>
         </div>
-      </div>
+      
     );
   }
 }
