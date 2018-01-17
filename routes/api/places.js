@@ -10,7 +10,7 @@ router.route('/:lat/:long').get(function(req, res) {
     .get(
       `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.params.lat},${
         req.params.long
-      }&radius=10000&type=car_repair&key=AIzaSyCthMjho7ybR3GWBpwLH0xg0rGiyZRql3g`
+      }&radius=1000&type=car_repair&key=AIzaSyCthMjho7ybR3GWBpwLH0xg0rGiyZRql3g`
     )
     .then(response => {
       console.log(response);
