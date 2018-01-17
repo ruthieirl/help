@@ -4,6 +4,8 @@ import Map from 'google-maps-react';
 import axios from 'axios';
 import { searchNearby } from '../../utils/googleApiHelpers';
 
+import styles from './styles.module.css';
+
 // MOCK MARKER, CREATE AS NEEDED
 const AnyReactComponent = (props) => <img src={props.src} style={{width: '20px'}}/>;
 
@@ -56,23 +58,25 @@ export class MapContainer extends Component {
   render() {
     console.log(this.state);
     return (
-      <div style={{ minWidth: '100vh', height: '100vh' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{
-            key: 'AIzaSyBLGby-UMhLuPgAHOhojCWjg75EJAC6M3k',
-            language: 'en'
-          }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          center={this.state.center}
-          zoom={this.state.zoom}
-        >
-          {this.state.places ? this.state.places.map(place => 
-            <AnyReactComponent lat={place.geometry.location.lat} lng={place.geometry.location.lng} src={place.icon} />
-          )
-         : '' 
-      }
-        </GoogleMapReact>
+      <div className="mapCont">
+        <div style={{ minWidth: '100vh', height: '100vh' }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: 'AIzaSyBLGby-UMhLuPgAHOhojCWjg75EJAC6M3k',
+              language: 'en'
+            }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+            center={this.state.center}
+            zoom={this.state.zoom}
+          >
+            {this.state.places ? this.state.places.map(place => 
+              <AnyReactComponent lat={place.geometry.location.lat} lng={place.geometry.location.lng} src={place.icon} />
+            )
+          : '' 
+        }
+          </GoogleMapReact>
+        </div>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './styles.module.css';
 
-class Landing extends Component 
+class Landing extends Component {
   render() {
     return (
       <div className="Landing">
@@ -63,10 +63,6 @@ class Landing extends Component
 
           </div>
         
-        </div>
-
-        <div className="jumbotron">
-          <div id="map"></div>
         </div>
       
       </div> 
