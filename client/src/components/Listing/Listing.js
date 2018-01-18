@@ -1,6 +1,4 @@
-import React, { PropTypes as T } from 'react';
-import classnames from 'classnames';
-
+import React from 'react';
 import Item from './Item';
 import styles from './styles.module.css';
 
