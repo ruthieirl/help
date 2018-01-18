@@ -2,44 +2,29 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Map from 'google-maps-react';
 import axios from 'axios';
-import { Item } from '../../Listing/Item'; 
+import Item from '../Listing/Item'; 
 
 export class Detail extends React.Component {
 
-    state = {
-        details: {}
-    };
-
-    componentDidMount() {
-    if (this.props.map) {
-        this.getDetails(this.props.map.placeId);
-    };
-
-    getDetails = placeId => {
-        axios.get(`/api/places/details/${placeId}`).then(res => {
-            console.log(res.data.results);
-            this.setState({
-                details: res.data.results
-            });
-        });
-    };
 
     render() {
-        console.log(this.state);
             return (
-                <Item>
-                    {this.state.details ? this.state.details.map(detail =>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <h3>{detail.name}</h3>
-                                <p>{detail.formatted_address}</p>
-                                <p>{detail.formatted_phone_number}</p>
-                                <p>{detail.website}</p>
-                                <button type="submit" class="btn btn-info"> Save Info</button>
-                        </li>
-                    )}
-                </Item>
+                <div className='container' style={{marginTop: '30px'}}>
+                <div className='row'>
+                    <div className='col-md-9 col-sm-12'>
+                    <h2>{this.props.name}</h2>
+                    <h4>{this.props.address}</h4>
+                    <p>Call: {this.props.phone} || Website: <a href={this.props.website} target="_blank">{this.props.website}</a> || <a href={this.props.url} target="_blank">View on Google Maps</a>
+                    </p>
+                    </div>
+                    <div className="col-md-3 col-sm-12 text-right">
+                        <button className='btn-outline-danger btn-small' onClick={this.props.closeDetail}>X</button>
+                    </div>
+
+                </div>
+                </div>
             )       
-        });
+        };
 }
 
 export default Detail;
