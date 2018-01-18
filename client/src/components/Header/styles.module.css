@@ -3,12 +3,16 @@
 .topbar {
   background-color: #1e3e33;
   height: 80px;
-  position: fixed;
   z-index: 20;
   top: 0;
-  left: 0;
+  left: 25;
   width: 100%;
   text-shadow: 2px 2px 4px #000000;
+}
+
+.newLogo2 {
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
 a {
@@ -19,8 +23,8 @@ a {
     line-height: 40px;
 }
     
-h1 {
-    font-size: 28px;
+.topbar h1 {
+    font-size: 36px;
     display: inline;
     margin: -15px 0 auto 15px;
     line-height: 50px;
