@@ -16,6 +16,7 @@
 }
 
 a {
+    font-family: 'Merriweather', serif;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
@@ -24,6 +25,7 @@ a {
 }
     
 .topbar h1 {
+  font-family: 'Merriweather', serif;
     font-size: 36px;
     display: inline;
     margin: -15px 0 auto 15px;
@@ -33,6 +35,7 @@ a {
  }
   
 section {
+  font-family: 'Merriweather', serif;
   position: absolute;
   top: 0px;
   right: 25px;

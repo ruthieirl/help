@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 export class Listing extends React.Component {
   render() {
     return (
-      <div className={classnames(styles.container)}>
+      <div className="container">
         {this.props.places
           ? this.props.places.map(place => {
               return (

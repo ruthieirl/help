@@ -8,11 +8,6 @@ const DisplayLinks = props => {
 	if (props.loggedIn) {
 		return (
 			<ul className="nav">
-				<li>
-					<Link to="/saved/details" className="nav-link" onClick={props._logout}>
-						My Saved Details
-					</Link>
-				</li>
 				<li className="nav-item">
 					<a target="_blank" href="https://github.com/ruthieirl/help" className="nav-link">
 						<i className="fa fa-lg fa-github" aria-hidden="true"></i> Github
@@ -20,12 +15,12 @@ const DisplayLinks = props => {
 				</li>
 				<li className="nav-item">
 					<a target="_blank" href="https://github.com/ruthieirl/help/issues/new" className="nav-link">
-					<i class="fa fa-lg fa-exclamation-triangle" aria-hidden="true"></i> Issues
+						<i className="fa fa-lg fa-exclamation-triangle" aria-hidden="true"></i> Issues
 					</a>
 				</li>
 				<li>
 					<Link to="#" className="nav-link" onClick={props._logout}>
-						Logout
+						<i className="fa fa-lg fa-space-shuttle" aria-hidden="true"></i> Logout
 					</Link>
 				</li>
 			</ul>
@@ -34,13 +29,18 @@ const DisplayLinks = props => {
 		return (
 			<ul className="nav">
 				<li className="nav-item">
+					<Link to="/map" className="nav-link" onClick={props._logout}>
+						<i className="fa fa-map-marker" aria-hidden="true"></i> Map
+					</Link>
+				</li>
+				<li className="nav-item">
 					<a target="_blank" href="https://github.com/ruthieirl/help" className="nav-link">
 						<i className="fa fa-lg fa-github" aria-hidden="true"></i> Github
 					</a>
 				</li>
 				<li className="nav-item">
 					<a target="_blank" href="https://github.com/ruthieirl/help/issues/new" className="nav-link">
-					<i class="fa fa-lg fa-exclamation-triangle" aria-hidden="true"></i> Issues
+					<i className="fa fa-lg fa-exclamation-triangle" aria-hidden="true"></i> Issues
 					</a>
 				</li>
 			</ul>

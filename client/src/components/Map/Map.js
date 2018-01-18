@@ -97,11 +97,11 @@ export class MapContainer extends Component {
     console.log(this.state);
     return (
       <div className="row" style={{ minWidth: '100vh', maxHeight: '100vh', minHeight: '100vh', overflow: 'scroll' }}>
-        <div className="col-xs-12 col-sm-12 col-md-3">
+        <div className="col-xs-12 col-sm-12 col-md-5">
           <Sidebar places={this.state.places} getPlacesDetail={this.getPlacesDetail} title={'Near you'} />
         </div>
 
-        <div className="col-xs-12 col-sm-12 col-md-9">
+        <div className="col-xs-12 col-sm-12 col-md-7">
           {this.state.isPlaceSelected ? (
             <Detail name={this.state.selectedPlace.name} address={this.state.selectedPlace.formatted_address} phone={this.state.selectedPlace.formatted_phone_number} reviews={this.state.selectedPlace.reviews} website={this.state.selectedPlace.website} googleMap={this.state.selectedPlace.url} 
             photos={this.state.selectedPlace.photos}
