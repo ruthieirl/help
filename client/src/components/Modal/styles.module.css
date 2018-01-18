@@ -1,0 +1,86 @@
+.btn {
+    padding: 5px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: blue;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+}
+
+.modal-btns{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.modal-p{
+    margin: auto 40px;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+}
+
+.modal-cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1040;
+    display: none;
+}
+
+.modal-cover.modal-cover-active {
+    display: block;
+}
+
+.modal-container {
+    z-index: 1050;
+    position: fixed;
+    border: 2px solid #1e3e33;
+    border-radius: 6px;
+    background: white;
+    width: 900px;
+    min-height: 300px;
+    left: 50%;
+    top: 20%;
+    margin-left: -450px;
+    display: none;
+}
+
+.modal-container.modal-container-active {
+    display: block;
+}
+
+.modal-header {
+    font-family: 'Merriweather', serif;
+    background-color: #1e3e33;
+    height: 80px;
+    color: #f46f22;
+}
+
+.modal-body{
+    display: flex;
+    align-content: center;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.modal-title {
+    margin-left: 75px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.newLogo{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-top: 8px;
+}

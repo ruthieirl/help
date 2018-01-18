@@ -1,6 +1,16 @@
+@import url("../../styles/base.css");
+
 html {
   position: relative;
   min-height: 100%;
+}
+
+body{
+  background: url("../../media/backdrop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Pontano Sans',
+  sans-serif;
 }
 
 .Landing {
@@ -9,14 +19,11 @@ html {
 }
 
 .Landing-header {
+  font-family: 'Merriweather', serif;
   text-align: center;
   height: auto;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-body {
-  font-family: 'Pontano Sans', sans-serif;
 }
 
 .search-btn {
@@ -41,7 +48,7 @@ body {
 
 .btn-block {
   margin-top: 5px;
-  background-color: #f4a922;
+  background-color: #f46f22;
   color: #fff;
   border: 1px solid #fff;
     -moz-border-radius: 6px;
@@ -71,10 +78,29 @@ body {
 }
 
 a {
-  color: #f4a922;
+  color: #f46f22;
 }
 
 a:hover {
   text-decoration: none;
   color: #e62601;
 }
+
+.newLogo{
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  
+}
+
+h1{
+  color: #f46f22;
+  font-family: 'Merriweather', serif;
+}
+
+h3{
+  color: #ffffff;
+  font-family: 'Merriweather', serif;
+}
+
+

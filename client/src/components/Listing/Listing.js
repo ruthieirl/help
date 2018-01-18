@@ -1,13 +1,11 @@
-import React, { PropTypes as T } from 'react';
-import classnames from 'classnames';
-
+import React from 'react';
 import Item from './Item';
 import styles from './styles.module.css';
 
 export class Listing extends React.Component {
   render() {
     return (
-      <div className={classnames(styles.container)}>
+      <div className="container">
         {this.props.places
           ? this.props.places.map(place => {
               return (
