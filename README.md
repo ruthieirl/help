@@ -1,4 +1,9 @@
-# Help!
+-----------------------------------------
+# HELP!
+
+#### HTML * CSS .. Bootstrap & Font Awesome .. * JavaScript * jQuery * AJAX * MongoDB * APIs * Express * Node * React 
+
+
   <!-- Dependency Status -->
   <a href="https://david-dm.org/ruthieirl/help">
     <img src="https://david-dm.org/ruthieirl/help.svg" alt="Dependency Status" />
@@ -16,7 +21,9 @@
     <img src="http://img.shields.io/:license-mit-blue.svg" alt="License" />
   </a>
 
-**Live Demo**:
+-----------------------------------------
+
+*Note: This repo does not function. It was built using a tutorial with deprecated NPM packages and was abandoned.  We attempted to rebuild and rework here(https://github.com/wrainaud/help).*
 
 ## Summary
 A web based application that provides quick and easy access to Autobody and Repair Shops, Towing Companies, and Emergency resources in your area. Help! is built with love, paitience, and the MERN stack ( MongoDB, Express, React, Node.js).

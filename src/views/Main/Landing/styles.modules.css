@@ -1,0 +1,22 @@
+.Landing {
+  text-align: center;
+}
+
+.Landing-header {
+  background-color: #222;
+  height: auto;
+  padding: 20px;
+  color: white;
+}
+
+.Landing-title {
+  font-size: 1.5em;
+}
+
+.icon-box {
+  padding: 25px 0;
+}
+
+.fa {
+  padding-top: 5px;
+}
